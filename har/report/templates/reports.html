@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heritage at Risk</title>
+    <link href="{% static 'css/reports.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/reports.js' %}"></script>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="flex-container">
+      <img class="logo" src="{% static 'img/logo_har.2.0.png' %}">
+      <div class="flex-container">
+        {% block content %}
+        {% for report in reports %}
+        <div class="report-container">
+            <img class="ic-heritage" src="{% static 'img/ic_heritage.png' %}"/>
+            <div class="report-info">
+                <p>{{report.name}}<br>({{report.latitude}}, {{report.longitude}}, {{report.altitude}})</p>
+            </div>
+            <div class="edit-button" onclick="onclickEditReport({{report.id}})">
+                <img class='edit-icon' src="{% static 'img/edit-icon.png' %}"/>
+            </div>
+            <div class="delete-button" onclick="onclickDeleteReport({{report.id}})">
+                <img class='delete-icon' src="{% static 'img/delete-icon.png' %}"/>
+            </div>
+        </div>
+        {% endfor %}
+        {% endblock %}
+        <input class="add-button" type="button" onclick="onclickAddReport()" value="Add Report"/>
+      </div>
+    </div>
+  </body>
+</html>

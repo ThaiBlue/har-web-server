@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heritage at Risk</title>
+    <link href="{% static 'css/connection.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/connection.js' %}"></script>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="flex-container">
+      <img class="logo" src="{% static 'img/logo_har.2.0.png' %}">
+      <p>(Don't have an acccount?We create one for you)</p>
+      <form action="" method="POST" class="flex-container">
+        {% csrf_token %}
+        <input type="text" id="email" name="email" placeholder="Email" required pattern=".+@.+\..+") title="An email address"/>
+        <input class="password" type="password" id="password" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*\w).{8,}" title="Must contain both number and letter, and at least 8 or more characters"/>
+        <p class="forgot-pass" id='forgot-pass' onclick="forgotPass()">Forgot password?</p>
+        <input class="connect" type="submit" value="Connect">
+      </form>
+      <img class="eye" id="eye" src="{% static 'img/ic_eye.png' %}"/>
+      <div class="eye-box" id="eye-box">
+        <img class="eye-slash" id="eye-slash" onclick="onClickEyeIcon()" src="{% static 'img/ic_eye_slash.png' %}"/>
+      </div>
+      {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+            {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+
+body {
+    background-color: rgb(236, 41, 66);
+}
+
+p {
+    color: white;
+    font-size: small;
+    font-stretch: expanded;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 5%;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.add-button {
+    margin-top: 20px;
+    width: 420px;
+    padding: 8px;
+    border-radius: 5px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+}
+
+.report-container { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 420px;
+    height: 40px;
+    margin-top: 10px;
+}
+.report-info {
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 330px;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.edit-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.ic-heritage {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.edit-button {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.delete-button {
+    width: 20px;
+    height: 20px;   
+}
+.messages {
+    margin-top: -5px;
+    margin-left: -330px;
+}

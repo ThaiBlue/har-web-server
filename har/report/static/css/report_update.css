@@ -1,0 +1,37 @@
+
+body {
+    background-color: rgb(236, 41, 66);
+}
+
+p {
+    color: white;
+    font-size: small;
+    font-stretch: expanded;
+}
+input {
+    margin-top: 20px;
+    width: 400px;
+    padding: 5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 5%;
+    width: 200px;
+    height: 200px;
+}
+
+.connect {
+    margin-top: 20px;
+    width: 426px;
+    padding: 8px;
+    border-radius: 5px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+}
